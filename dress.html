@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Daily Muse — Dress Wanita Harian | Satu Dress, Banyak Acara</title>
+<meta name="description" content="Daily Muse membuat dress wanita yang adem dipakai seharian. Ukuran jujur XS–XXL, gratis tukar ukuran, order mudah via WhatsApp. Made in Indonesia." />
+<meta name="theme-color" content="#FBF8F4" />
+<meta property="og:title" content="Daily Muse — Dress Wanita Harian" />
+<meta property="og:description" content="Satu dress untuk kerja, nongkrong, dan acara keluarga. Ukuran jujur XS–XXL." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/jpeg" href="assets/logo-daily-muse-dress.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: { DEFAULT: '#FBF8F4', deep: '#F3ECE4' },
+          rose:  { light: '#EFD9D2', DEFAULT: '#C89B92', dark: '#9A5F54' },
+          sage:  { light: '#DFE5D8', DEFAULT: '#9FAE93', dark: '#7C8C72' },
+          ink:   { DEFAULT: '#2E2A27', soft: '#4A443F' },
+          muted: '#7A7168',
+          line:  '#E7DED4'
+        },
+        fontFamily: {
+          display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
+        },
+        borderRadius: { arch: '999px 999px 28px 28px' },
+        maxWidth: { content: '1200px' }
+      }
+    }
+  };
+</script>
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { background-color: #FBF8F4; }
+  ::selection { background: #C89B92; color: #FBF8F4; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .eyebrow { letter-spacing: .22em; text-transform: uppercase; }
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .lift { transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease; }
+  .lift:hover { transform: translateY(-6px); box-shadow: 0 22px 45px -30px rgba(46,42,39,.45); }
+  .acc-panel { overflow: hidden; max-height: 0; transition: max-height .4s ease; }
+  .acc-panel.open { max-height: 320px; }
+  .marquee { animation: slide 38s linear infinite; }
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ui-btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+    outline: 2px solid #9A5F54; outline-offset: 2px;
+  }
+  /* Slot foto: tampil rapi kalau file gambarnya belum ada */
+  .ph { background:
+      linear-gradient(135deg, #F3ECE4 0%, #EFD9D2 100%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .marquee { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+<!-- ============================================================
+     WAJIB DIGANTI SEBELUM PUBLISH (lihat juga bagian <script> bawah):
+     1. Nomor WhatsApp di const WA_NUMBER
+     2. Nama, bahan, panjang, dan harga tiap dress di array PRODUCTS
+     3. Semua klaim di section kepercayaan (COD, gratis tukar ukuran, dll)
+        HARUS benar-benar berlaku. Jangan pasang klaim yang belum dijalankan.
+     4. Isi ulasan asli pelanggan di array REVIEWS (biarkan kosong bila belum ada)
+     5. Foto dress sudah dipotong dari "menu dress/Gemini_Generated_Image_xcgnkyxcgnkyxcgn.jpeg"
+        dan disimpan sebagai assets/dress-1.jpeg ... dress-6.jpeg, hero, dan 3 foto cara pakai.
+        Kalau kamu punya foto resolusi lebih tinggi, cukup timpa file-file tersebut.
+     ============================================================ -->
+
+<!-- ==================== HEADER ==================== -->
+<header id="top" class="sticky top-0 z-40 border-b border-line/70 bg-cream/90 backdrop-blur">
+  <div class="mx-auto flex max-w-content items-center gap-4 px-5 py-3.5 sm:px-8">
+    <a href="#top" class="flex shrink-0 items-center gap-2.5">
+      <img src="assets/logo-daily-muse-dress.jpeg" alt="Logo Daily Muse"
+           class="h-12 w-auto object-contain mix-blend-multiply" onerror="this.style.display='none'" />
+      <span class="font-display text-2xl tracking-wide">Daily Muse</span>
+    </a>
+
+    <nav class="ml-auto hidden items-center gap-8 text-sm text-ink-soft lg:flex">
+      <a href="#koleksi" class="hover:text-rose-dark transition">Koleksi</a>
+      <a href="#kenapa" class="hover:text-rose-dark transition">Kenapa Kami</a>
+      <a href="#ukuran" class="hover:text-rose-dark transition">Panduan Ukuran</a>
+      <a href="#gaya" class="hover:text-rose-dark transition">Cara Pakai</a>
+      <a href="#ulasan" class="hover:text-rose-dark transition">Ulasan</a>
+      <a href="#faq" class="hover:text-rose-dark transition">FAQ</a>
+    </nav>
+
+    <a href="#" data-wa-general
+       class="ml-auto hidden rounded-full bg-rose-dark px-5 py-2.5 text-sm font-medium text-cream transition hover:bg-ink sm:inline-flex lg:ml-0">
+      Order via WhatsApp
+    </a>
+
+    <button id="menuBtn" aria-label="Buka menu" aria-expanded="false"
+      class="ml-auto rounded-full border border-line p-2.5 sm:ml-0 lg:hidden">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M3 6h18M3 12h18M3 18h18" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden border-t border-line bg-cream px-5 pb-5 pt-2 lg:hidden">
+    <a href="#koleksi" class="block py-3 text-sm border-b border-line">Koleksi</a>
+    <a href="#kenapa" class="block py-3 text-sm border-b border-line">Kenapa Kami</a>
+    <a href="#ukuran" class="block py-3 text-sm border-b border-line">Panduan Ukuran</a>
+    <a href="#gaya" class="block py-3 text-sm border-b border-line">Cara Pakai</a>
+    <a href="#ulasan" class="block py-3 text-sm border-b border-line">Ulasan</a>
+    <a href="#faq" class="block py-3 text-sm border-b border-line">FAQ</a>
+    <a href="#" data-wa-general class="mt-4 inline-flex rounded-full bg-rose-dark px-5 py-3 text-sm font-medium text-cream">Order via WhatsApp</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute -right-32 -top-24 h-80 w-80 rounded-full bg-rose-light/50 blur-3xl"></div>
+    <div class="mx-auto grid max-w-content items-center gap-12 px-5 pb-16 pt-12 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:pb-24 lg:pt-20">
+
+      <div class="reveal">
+        <p class="eyebrow text-[11px] text-rose-dark">Made in Indonesia · Slow fashion</p>
+        <h1 class="mt-5 font-display text-[2.6rem] leading-[1.08] sm:text-6xl">
+          Dress yang bikin kamu <em class="text-rose-dark">betah pakai seharian</em>
+        </h1>
+        <p class="mt-6 max-w-lg text-[15px] leading-relaxed text-ink-soft">
+          Satu dress untuk kerja, jalan sama teman, sampai acara keluarga. Bahannya adem, jatuhnya rapi,
+          dan ukurannya jujur — jadi kamu nggak perlu nebak-nebak saat order.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#koleksi" class="rounded-full bg-rose-dark px-7 py-3.5 text-sm font-medium text-cream transition hover:bg-ink">
+            Lihat Koleksi
+          </a>
+          <a href="#" data-wa-general
+             class="rounded-full border border-ink/15 px-7 py-3.5 text-sm font-medium transition hover:border-ink/40 hover:bg-white/60">
+            Tanya dulu via WhatsApp
+          </a>
+        </div>
+
+        <dl class="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-line pt-7">
+          <div>
+            <dt class="eyebrow text-[10px] text-muted">Ukuran</dt>
+            <dd class="mt-1.5 font-display text-xl">XS – XXL</dd>
+          </div>
+          <div>
+            <dt class="eyebrow text-[10px] text-muted">Bahan</dt>
+            <dd class="mt-1.5 font-display text-xl">Adem &amp; jatuh</dd>
+          </div>
+          <div>
+            <dt class="eyebrow text-[10px] text-muted">Kirim</dt>
+            <dd class="mt-1.5 font-display text-xl">Seluruh ID</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="reveal relative">
+        <div class="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-arch bg-cream-deep">
+          <div class="ph absolute inset-0 grid place-items-center px-6 text-center">
+            <span class="eyebrow text-[10px] text-rose-dark">Foto utama<br /><span class="tracking-normal normal-case">assets/dress-hero.jpeg</span></span>
+          </div>
+          <img src="assets/dress-hero.jpeg" alt="Dress wanita Daily Muse dipakai model"
+               class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'" />
+        </div>
+        <div class="absolute -bottom-4 left-1/2 w-[86%] max-w-xs -translate-x-1/2 rounded-2xl border border-line bg-cream/95 px-5 py-4 shadow-[0_24px_50px_-38px_rgba(46,42,39,.6)] backdrop-blur">
+          <p class="text-[13px] leading-snug text-ink-soft"><span class="font-medium text-ink">Gratis tukar ukuran</span> 1x per pesanan — tenang kalau size-nya belum pas.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TRUST BAR ==================== -->
+  <section aria-label="Keunggulan layanan" class="border-y border-line bg-cream-deep py-4">
+    <div class="flex overflow-hidden">
+      <div class="marquee flex shrink-0 items-center gap-14 whitespace-nowrap pr-14">
+        <!-- GANTI klaim di bawah ini sesuai kenyataan layanan kamu -->
+        <span class="eyebrow text-[10px] text-muted">Gratis tukar ukuran</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">COD tersedia</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">Dikirim dari Indonesia</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">Respon chat &lt; 1 jam (jam kerja)</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">Bisa tanya ukuran sebelum bayar</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">Gratis tukar ukuran</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">COD tersedia</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">Dikirim dari Indonesia</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">Respon chat &lt; 1 jam (jam kerja)</span>
+        <span class="text-rose">✿</span>
+        <span class="eyebrow text-[10px] text-muted">Bisa tanya ukuran sebelum bayar</span>
+        <span class="text-rose">✿</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MASALAH → SOLUSI ==================== -->
+  <section class="mx-auto max-w-content px-5 py-20 sm:px-8 lg:py-24">
+    <div class="reveal max-w-2xl">
+      <p class="eyebrow text-[11px] text-rose-dark">Kenapa cari dress itu bikin capek</p>
+      <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Kalau kamu pernah merasa begini, kamu nggak sendiri.</h2>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <div class="reveal rounded-3xl border border-line bg-white/60 p-7">
+        <p class="font-display text-3xl text-rose">01</p>
+        <h3 class="mt-3 text-base font-medium">Bahannya panas, nggak betah lama</h3>
+        <p class="mt-2.5 text-sm leading-relaxed text-ink-soft">Baru dipakai satu jam sudah gerah, akhirnya dress numpuk di lemari.</p>
+        <p class="mt-5 border-t border-line pt-4 text-sm leading-relaxed"><span class="eyebrow block text-[10px] text-sage-dark">Solusinya</span> Kami pilih bahan yang ringan dan sirkulasi udaranya enak, jadi tetap nyaman setelah berjam-jam dipakai.</p>
+      </div>
+      <div class="reveal rounded-3xl border border-line bg-white/60 p-7">
+        <p class="font-display text-3xl text-rose">02</p>
+        <h3 class="mt-3 text-base font-medium">Ukuran di foto beda dengan di badan</h3>
+        <p class="mt-2.5 text-sm leading-relaxed text-ink-soft">Dikiranya pas, ternyata kesempitan di pinggang atau kepanjangan.</p>
+        <p class="mt-5 border-t border-line pt-4 text-sm leading-relaxed"><span class="eyebrow block text-[10px] text-sage-dark">Solusinya</span> Kami tulis lingkar badan, lingkar pinggang, dan panjang dress apa adanya di tabel ukuran.</p>
+      </div>
+      <div class="reveal rounded-3xl border border-line bg-white/60 p-7">
+        <p class="font-display text-3xl text-rose">03</p>
+        <h3 class="mt-3 text-base font-medium">Dress cuma bisa dipakai 1 acara</h3>
+        <p class="mt-2.5 text-sm leading-relaxed text-ink-soft">Motifnya terlalu ramai atau potongannya terlalu formal buat harian.</p>
+        <p class="mt-5 border-t border-line pt-4 text-sm leading-relaxed"><span class="eyebrow block text-[10px] text-sage-dark">Solusinya</span> Potongan yang clean, jadi bisa naik kelas dengan blazer atau turun santai dengan sneakers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KENAPA KAMI ==================== -->
+  <section id="kenapa" class="border-y border-line bg-cream-deep">
+    <div class="mx-auto grid max-w-content gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1fr] lg:gap-20 lg:py-24">
+      <div class="reveal">
+        <p class="eyebrow text-[11px] text-rose-dark">Kenapa Daily Muse</p>
+        <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Dibuat oleh orang yang juga malas ribet.</h2>
+        <p class="mt-6 max-w-md text-[15px] leading-relaxed text-ink-soft">
+          Kami bukan brand besar. Kami cuma brand yang pengin kamu bisa beli dress tanpa harus menebak-nebak
+          dan tanpa takut salah ukuran.
+        </p>
+        <a href="#koleksi" class="mt-8 inline-flex rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-cream transition hover:bg-rose-dark">
+          Lihat dress yang tersedia
+        </a>
+      </div>
+
+      <div class="reveal grid gap-y-8 gap-x-10 sm:grid-cols-2">
+        <div>
+          <h3 class="font-display text-2xl">Bahan yang adem</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-ink-soft">Ringan, nggak menerawang, dan tetap nyaman dipakai dari pagi sampai malam.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl">Ukuran jujur</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-ink-soft">Data ukuran dari dress yang sudah jadi — bukan estimasi dari katalog pabrik.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl">Jahitan rapi</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-ink-soft">Dijahit di Indonesia dengan kontrol kualitas satu per satu sebelum dikirim.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl">Dibantu pilih size</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-ink-soft">Kirim tinggi, berat, dan ukuran badanmu lewat WhatsApp — kami bantu tentukan size-nya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KOLEKSI ==================== -->
+  <section id="koleksi" class="mx-auto max-w-content px-5 py-20 sm:px-8 lg:py-24">
+    <div class="reveal flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-xl">
+        <p class="eyebrow text-[11px] text-rose-dark">Koleksi</p>
+        <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Pilih dress sesuai rutinitas kamu.</h2>
+      </div>
+      <p class="max-w-xs text-sm leading-relaxed text-muted">Harga sudah termasuk pajak. Stok terbatas karena produksi kami kecil dan berkala.</p>
+    </div>
+
+    <div class="no-scrollbar reveal mt-10 flex gap-2.5 overflow-x-auto pb-1">
+      <button data-filter="semua" class="filter-btn shrink-0 rounded-full border border-ink/15 bg-ink px-5 py-2.5 text-sm text-cream transition">Semua</button>
+      <button data-filter="harian" class="filter-btn shrink-0 rounded-full border border-ink/15 px-5 py-2.5 text-sm transition hover:border-ink/40">Harian</button>
+      <button data-filter="kerja" class="filter-btn shrink-0 rounded-full border border-ink/15 px-5 py-2.5 text-sm transition hover:border-ink/40">Kerja</button>
+      <button data-filter="acara" class="filter-btn shrink-0 rounded-full border border-ink/15 px-5 py-2.5 text-sm transition hover:border-ink/40">Acara</button>
+    </div>
+
+    <div id="productGrid" class="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-3"></div>
+
+    <p id="emptyState" class="hidden mt-10 rounded-3xl border border-dashed border-line bg-cream-deep px-6 py-12 text-center text-sm text-muted">
+      Belum ada dress di kategori ini. Coba pilih kategori lain, atau tanya stok terbaru via WhatsApp.
+    </p>
+  </section>
+
+  <!-- ==================== PANDUAN UKURAN ==================== -->
+  <section id="ukuran" class="border-y border-line bg-cream-deep">
+    <div class="mx-auto max-w-content px-5 py-20 sm:px-8 lg:py-24">
+      <div class="reveal max-w-xl">
+        <p class="eyebrow text-[11px] text-rose-dark">Panduan ukuran</p>
+        <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Ukur badanmu dulu, jangan mengira-ngira.</h2>
+        <p class="mt-5 text-[15px] leading-relaxed text-ink-soft">
+          Ukur pakai meteran jahit, jangan sampai kainnya kencang. Kalau hasilnya ada di antara dua size,
+          ambil yang lebih besar untuk potongan longgar.
+        </p>
+      </div>
+
+      <div class="reveal mt-10 overflow-hidden rounded-3xl border border-line bg-white/70">
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[560px] text-left text-sm">
+            <caption class="sr-only">Tabel ukuran dress Daily Muse</caption>
+            <thead class="bg-cream-deep/80 text-[11px] uppercase tracking-[0.14em] text-muted">
+              <tr>
+                <th scope="col" class="px-6 py-4 font-medium">Size</th>
+                <th scope="col" class="px-6 py-4 font-medium">Lingkar badan</th>
+                <th scope="col" class="px-6 py-4 font-medium">Lingkar pinggang</th>
+                <th scope="col" class="px-6 py-4 font-medium">Panjang dress</th>
+                <th scope="col" class="px-6 py-4 font-medium">Cocok untuk berat</th>
+              </tr>
+            </thead>
+            <tbody id="sizeTable" class="divide-y divide-line"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="reveal mt-6 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-2xl border border-line bg-white/60 px-6 py-5">
+          <p class="text-sm font-medium">Cara mengukur</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">Lingkar badan diukur di bagian terlebar, lingkar pinggang di bagian tersempit.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-white/60 px-6 py-5">
+          <p class="text-sm font-medium">Belum yakin?</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">Kirim tinggi, berat, dan lingkar badanmu ke WhatsApp — kami bantu pilihkan size.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-white/60 px-6 py-5">
+          <p class="text-sm font-medium">Salah ukuran?</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">Bisa tukar ukuran sesuai ketentuan yang berlaku. Detailnya ditulis di halaman kebijakan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CARA PAKAI ==================== -->
+  <section id="gaya" class="mx-auto max-w-content px-5 py-20 sm:px-8 lg:py-24">
+    <div class="reveal max-w-xl">
+      <p class="eyebrow text-[11px] text-rose-dark">Cara pakai</p>
+      <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Satu dress, tiga suasana.</h2>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <article class="reveal overflow-hidden rounded-3xl border border-line bg-white/60">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-[#CFCEC6]">
+          <div class="ph absolute inset-0 grid place-items-center px-4 text-center">
+            <span class="eyebrow text-[10px] text-rose-dark">assets/dress-look-1.jpeg</span>
+          </div>
+          <img src="assets/dress-look-1.jpeg" alt="Dress Daily Muse dipadukan untuk kerja" class="absolute inset-0 h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <div class="p-7">
+          <p class="eyebrow text-[10px] text-muted">Ke kantor</p>
+          <h3 class="mt-3 font-display text-2xl">Rapi tanpa terlihat kaku</h3>
+          <ul class="mt-4 space-y-2 text-sm leading-relaxed text-ink-soft">
+            <li>· Tambahkan blazer dan sepatu bertumit rendah.</li>
+            <li>· Pilih warna netral untuk kesan profesional.</li>
+            <li>· Kunci dengan tas berstruktur dan jam tangan.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="reveal overflow-hidden rounded-3xl border border-line bg-white/60">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-[#CFCEC6]">
+          <div class="ph absolute inset-0 grid place-items-center px-4 text-center">
+            <span class="eyebrow text-[10px] text-rose-dark">assets/dress-look-2.jpeg</span>
+          </div>
+          <img src="assets/dress-look-2.jpeg" alt="Dress Daily Muse dipadukan untuk weekend" class="absolute inset-0 h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <div class="p-7">
+          <p class="eyebrow text-[10px] text-muted">Akhir pekan</p>
+          <h3 class="mt-3 font-display text-2xl">Santai tapi tetap niat</h3>
+          <ul class="mt-4 space-y-2 text-sm leading-relaxed text-ink-soft">
+            <li>· Sneakers putih dan tas kanvas kecil.</li>
+            <li>· Tambah kardigan tipis kalau masuk ruang ber-AC.</li>
+            <li>· Topi atau kacamata jadi penambah karakter.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="reveal overflow-hidden rounded-3xl border border-line bg-white/60">
+        <div class="relative aspect-[3/4] overflow-hidden rounded-3xl bg-[#CFCEC6]">
+          <div class="ph absolute inset-0 grid place-items-center px-4 text-center">
+            <span class="eyebrow text-[10px] text-rose-dark">assets/dress-look-3.jpeg</span>
+          </div>
+          <img src="assets/dress-look-3.jpeg" alt="Dress Daily Muse dipadukan untuk acara" class="absolute inset-0 h-full w-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <div class="p-7">
+          <p class="eyebrow text-[10px] text-muted">Acara keluarga</p>
+          <h3 class="mt-3 font-display text-2xl">Naik kelas dalam 2 menit</h3>
+          <ul class="mt-4 space-y-2 text-sm leading-relaxed text-ink-soft">
+            <li>· Selendang tipis dan perhiasan minimalis.</li>
+            <li>· Sandal atau sepatu berujung runcing.</li>
+            <li>· Rias wajah sederhana, biarkan dress jadi fokus.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== PERAWATAN ==================== -->
+  <section class="border-y border-line bg-cream-deep">
+    <div class="mx-auto max-w-content px-5 py-16 sm:px-8">
+      <div class="reveal grid gap-10 lg:grid-cols-[0.7fr_1fr] lg:gap-16">
+        <div>
+          <p class="eyebrow text-[11px] text-rose-dark">Perawatan</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight sm:text-4xl">Biar dress-nya awet dan warnanya tetap bagus.</h2>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div>
+            <p class="text-sm font-medium">Cuci tangan lebih aman</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Pakai air dingin dan deterjen lembut. Kalau pakai mesin, masukkan ke kantong laundry.</p>
+          </div>
+          <div>
+            <p class="text-sm font-medium">Jangan diperas keras</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Tekan pelan pakai handuk, lalu jemur di tempat teduh supaya warna tidak cepat pudar.</p>
+          </div>
+          <div>
+            <p class="text-sm font-medium">Setrika suhu sedang</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Balik bagian dalamnya sebelum disetrika untuk menghindari bekas mengkilap.</p>
+          </div>
+          <div>
+            <p class="text-sm font-medium">Simpan dengan gantungan</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Hindari lipatan lama di area yang sama supaya bentuk dress tidak berubah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ULASAN ==================== -->
+  <section id="ulasan" class="mx-auto max-w-content px-5 py-20 sm:px-8 lg:py-24">
+    <div class="reveal flex flex-wrap items-end justify-between gap-8">
+      <div class="max-w-xl">
+        <p class="eyebrow text-[11px] text-rose-dark">Kata pelanggan</p>
+        <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Cerita dari yang sudah pakai.</h2>
+      </div>
+      <div id="reviewSummary" class="hidden shrink-0 rounded-3xl border border-line bg-white/60 px-7 py-5"></div>
+    </div>
+
+    <!-- Muncul otomatis selama masih ada ulasan ber-tanda draft: true -->
+    <div id="reviewNotice" class="mt-8 hidden rounded-2xl border border-dashed border-rose/70 bg-rose-light/25 px-6 py-5 text-[13px] leading-relaxed text-ink-soft"></div>
+
+    <div id="reviewGrid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+    <!-- Hanya muncul kalau array REVIEWS benar-benar kosong -->
+    <div id="reviewEmpty" class="mt-10 rounded-3xl border border-dashed border-line bg-cream-deep px-8 py-12 text-center">
+      <p class="font-display text-2xl">Belum ada ulasan yang dipasang</p>
+      <p class="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">
+        Hubungi pelanggan pertama kamu, minta izin, lalu masukkan ulasannya di array
+        <code class="rounded bg-white/70 px-1.5 py-0.5 text-[12px]">REVIEWS</code> pada file ini.
+      </p>
+    </div>
+
+    <div class="reveal mt-12 flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-line bg-white/60 px-7 py-7 sm:px-9">
+      <div>
+        <p class="font-display text-2xl">Sudah pernah beli dress kami?</p>
+        <p class="mt-2 max-w-lg text-sm leading-relaxed text-ink-soft">
+          Ulasanmu sangat membantu pembeli lain memilih ukuran. Kirim lewat WhatsApp, boleh sekalian sertakan foto saat dipakai.
+        </p>
+      </div>
+      <a href="#" data-wa-review class="rounded-full bg-rose-dark px-7 py-3.5 text-sm font-medium text-cream transition hover:bg-ink">
+        Kirim ulasan
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="border-y border-line bg-cream-deep">
+    <div class="mx-auto grid max-w-content gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.75fr_1fr] lg:gap-20 lg:py-24">
+      <div class="reveal">
+        <p class="eyebrow text-[11px] text-rose-dark">FAQ</p>
+        <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Yang sering ditanyakan</h2>
+        <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-ink-soft">
+          Belum terjawab? Tanya langsung, kami balas pada jam kerja.
+        </p>
+        <a href="#" data-wa-general class="mt-6 inline-flex rounded-full border border-ink/20 px-6 py-3 text-sm font-medium transition hover:border-ink/50 hover:bg-white/60">
+          Chat WhatsApp
+        </a>
+      </div>
+
+      <div class="reveal divide-y divide-line border-y border-line">
+        <!-- Jawaban di bawah ini harus disesuaikan dengan kebijakan asli brand -->
+        <div class="faq-item">
+          <button class="faq-trigger flex w-full items-center gap-6 py-5 text-left" aria-expanded="false">
+            <span class="flex-1 text-[15px] font-medium">Bagaimana cara ordernya?</span>
+            <span class="faq-icon shrink-0 text-xl leading-none text-rose-dark transition">+</span>
+          </button>
+          <div class="acc-panel"><p class="pb-5 pr-10 text-sm leading-relaxed text-ink-soft">Pilih dress, tekan tombol pesan, lalu pilih ukuran. Pesanan otomatis masuk ke WhatsApp kami berisi nama dress dan ukuran yang kamu pilih. Admin akan konfirmasi stok dan ongkir sebelum kamu bayar.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger flex w-full items-center gap-6 py-5 text-left" aria-expanded="false">
+            <span class="flex-1 text-[15px] font-medium">Kalau ukurannya salah, bisa ditukar?</span>
+            <span class="faq-icon shrink-0 text-xl leading-none text-rose-dark transition">+</span>
+          </button>
+          <div class="acc-panel"><p class="pb-5 pr-10 text-sm leading-relaxed text-ink-soft">Bisa, sesuai ketentuan yang berlaku: label belum dilepas, belum dicuci, dan pengajuan dilakukan dalam batas waktu yang ditentukan. Detail lengkapnya ada di halaman kebijakan.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger flex w-full items-center gap-6 py-5 text-left" aria-expanded="false">
+            <span class="flex-1 text-[15px] font-medium">Pengiriman dari mana dan berapa lama?</span>
+            <span class="faq-icon shrink-0 text-xl leading-none text-rose-dark transition">+</span>
+          </button>
+          <div class="acc-panel"><p class="pb-5 pr-10 text-sm leading-relaxed text-ink-soft">Paket dikirim dari gudang kami di Indonesia. Estimasi tiba 1–4 hari kerja tergantung ekspedisi dan kota tujuan. Nomor resi kami kirim setelah paket diserahkan ke kurir.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger flex w-full items-center gap-6 py-5 text-left" aria-expanded="false">
+            <span class="flex-1 text-[15px] font-medium">Bahannya menerawang atau tidak?</span>
+            <span class="faq-icon shrink-0 text-xl leading-none text-rose-dark transition">+</span>
+          </button>
+          <div class="acc-panel"><p class="pb-5 pr-10 text-sm leading-relaxed text-ink-soft">Kami pilih bahan yang tidak menerawang saat dipakai di luar ruangan. Untuk warna terang, kami tetap sarankan dalaman berwarna senada agar hasilnya lebih mulus.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger flex w-full items-center gap-6 py-5 text-left" aria-expanded="false">
+            <span class="flex-1 text-[15px] font-medium">Bisa COD dan bayar di tempat?</span>
+            <span class="faq-icon shrink-0 text-xl leading-none text-rose-dark transition">+</span>
+          </button>
+          <div class="acc-panel"><p class="pb-5 pr-10 text-sm leading-relaxed text-ink-soft">COD tersedia untuk area yang dijangkau kurir. Silakan tanyakan ketersediaannya di area kamu saat konfirmasi pesanan.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger flex w-full items-center gap-6 py-5 text-left" aria-expanded="false">
+            <span class="flex-1 text-[15px] font-medium">Ada potongan harga untuk pembelian banyak?</span>
+            <span class="faq-icon shrink-0 text-xl leading-none text-rose-dark transition">+</span>
+          </button>
+          <div class="acc-panel"><p class="pb-5 pr-10 text-sm leading-relaxed text-ink-soft">Ada. Untuk pembelian mulai 3 pcs atau pesanan reseller, silakan chat kami supaya bisa dihitungkan penawaran khususnya.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA PENUTUP ==================== -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full bg-rose-light/60 blur-3xl"></div>
+    <div class="relative mx-auto max-w-content px-5 py-24 text-center sm:px-8">
+      <p class="reveal eyebrow text-[11px] text-rose-dark">Langkah terakhir</p>
+      <h2 class="reveal mx-auto mt-5 max-w-2xl font-display text-4xl leading-tight sm:text-5xl">
+        Pilih dress-nya, sisanya kami bantu.
+      </h2>
+      <p class="reveal mx-auto mt-6 max-w-lg text-[15px] leading-relaxed text-ink-soft">
+        Kalau masih ragu soal ukuran atau bahan, tanya dulu saja. Nggak harus langsung beli.
+      </p>
+      <div class="reveal mt-9 flex flex-wrap justify-center gap-3">
+        <a href="#koleksi" class="rounded-full bg-rose-dark px-8 py-4 text-sm font-medium text-cream transition hover:bg-ink">Lihat Koleksi</a>
+        <a href="#" data-wa-general class="rounded-full border border-ink/20 px-8 py-4 text-sm font-medium transition hover:border-ink/50 hover:bg-white/60">Tanya via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="border-t border-line bg-cream-deep">
+  <div class="mx-auto grid max-w-content gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.2fr_1fr_1fr]">
+    <div>
+      <img src="assets/logo-daily-muse-dress.jpeg" alt="Logo Daily Muse" class="h-16 w-auto object-contain mix-blend-multiply" onerror="this.style.display='none'" />
+      <p class="mt-1 font-display text-2xl">Daily Muse</p>
+      <p class="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
+        Pakaian harian yang dibuat di Indonesia. Kami produksi dalam jumlah kecil supaya kualitasnya bisa dijaga.
+      </p>
+    </div>
+    <div>
+      <p class="eyebrow text-[10px] text-muted">Jelajahi</p>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="#koleksi" class="hover:text-rose-dark">Koleksi dress</a></li>
+        <li><a href="#ukuran" class="hover:text-rose-dark">Panduan ukuran</a></li>
+        <li><a href="#gaya" class="hover:text-rose-dark">Cara pakai</a></li>
+        <li><a href="#faq" class="hover:text-rose-dark">FAQ</a></li>
+        <li><a href="index.html" class="hover:text-rose-dark">Koleksi t-shirt</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow text-[10px] text-muted">Bantuan</p>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        <li><a href="kebijakan.html" class="hover:text-rose-dark">Kebijakan &amp; tukar ukuran</a></li>
+        <li><a href="#" data-wa-general class="hover:text-rose-dark">Hubungi kami di WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-line">
+    <div class="mx-auto flex max-w-content flex-col gap-2 px-5 py-6 text-[12px] text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      <p>© <span id="year">2026</span> Daily Muse. Made in Indonesia.</p>
+      <p>Harga dapat berubah tanpa pemberitahuan. Ketersediaan stok dikonfirmasi lewat WhatsApp.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== TOMBOL WA STICKY (MOBILE) ==================== -->
+<a href="#" data-wa-general
+   class="fixed bottom-4 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2.5 rounded-full bg-rose-dark px-6 py-3.5 text-sm font-medium text-cream shadow-[0_18px_35px_-18px_rgba(46,42,39,.7)] sm:hidden">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.02c-.25.7-1.44 1.34-1.98 1.39-.54.05-1.03.16-2.9-.6-2.25-.9-3.68-3.22-3.79-3.37-.11-.15-.9-1.2-.9-2.29s.57-1.62.78-1.85c.2-.22.44-.28.59-.28l.42.01c.14.01.32-.05.5.38l.68 1.65c.06.13.1.28.01.44-.09.16-.13.26-.26.4l-.19.22c-.13.13-.26.27-.11.52.15.25.66 1.09 1.42 1.77.97.87 1.79 1.14 2.04 1.27.25.13.4.11.55-.06.15-.18.64-.75.81-1s.34-.21.57-.13c.23.09 1.47.69 1.72.82.25.13.42.19.48.3.06.1.06.62-.19 1.31Z" />
+  </svg>
+  Tanya &amp; Order
+</a>
+
+<!-- ==================== LIGHTBOX PRODUK ==================== -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-ink/60 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="lbName">
+  <div class="max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-3xl bg-cream">
+    <div class="flex items-start justify-between gap-4 px-6 pt-5 sm:px-8">
+      <p class="eyebrow text-[10px] text-muted">Detail dress</p>
+      <button id="lbClose" aria-label="Tutup" class="rounded-full border border-line p-2 transition hover:bg-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19" /></svg>
+      </button>
+    </div>
+    <div class="grid gap-8 px-6 pb-8 pt-4 sm:px-8 md:grid-cols-2">
+      <div class="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#CFCEC6]">
+        <div id="lbPh" class="ph absolute inset-0 grid place-items-center px-4 text-center">
+          <span class="eyebrow text-[10px] text-rose-dark"></span>
+        </div>
+        <img id="lbImg" src="" alt="" class="absolute inset-0 h-full w-full object-contain" onerror="this.style.display='none'" />
+      </div>
+      <div>
+        <h3 id="lbName" class="font-display text-3xl leading-tight"></h3>
+        <p id="lbPrice" class="mt-3 text-xl"></p>
+        <p id="lbDesc" class="mt-4 text-sm leading-relaxed text-ink-soft"></p>
+        <ul id="lbSpecs" class="mt-5 space-y-1.5 border-t border-line pt-5 text-sm text-ink-soft"></ul>
+
+        <div class="mt-6">
+          <p class="eyebrow text-[10px] text-muted">Pilih ukuran</p>
+          <div id="lbSizes" class="mt-3 flex flex-wrap gap-2"></div>
+          <p id="lbHint" class="mt-3 text-[12px] leading-relaxed text-muted">Belum yakin? Kirim lingkar badanmu setelah chat — kami bantu pilihkan.</p>
+        </div>
+
+        <div class="mt-6 flex items-center gap-4">
+          <div class="flex items-center rounded-full border border-line">
+            <button id="qtyMinus" aria-label="Kurangi jumlah" class="px-4 py-2.5 text-lg leading-none text-ink-soft">−</button>
+            <span id="qty" class="w-8 text-center text-sm">1</span>
+            <button id="qtyPlus" aria-label="Tambah jumlah" class="px-4 py-2.5 text-lg leading-none text-ink-soft">+</button>
+          </div>
+          <p class="text-[12px] text-muted">Total <span id="lbTotal" class="font-medium text-ink"></span></p>
+        </div>
+
+        <button id="lbOrder" class="mt-6 w-full rounded-full bg-rose-dark px-6 py-4 text-sm font-medium text-cream transition hover:bg-ink">
+          Pesan via WhatsApp
+        </button>
+        <p class="mt-3 text-[12px] leading-relaxed text-muted">Stok dan ongkir dikonfirmasi admin dulu sebelum pembayaran.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   KONFIGURASI — GANTI BAGIAN INI
+   Nomor WhatsApp dalam format internasional tanpa tanda "+" dan tanpa spasi.
+   Contoh: 62 812 3456 7890  ->  '6281234567890'
+   ============================================================ */
+const WA_NUMBER = '6281234567890';
+const STORE_NAME = 'Daily Muse';
+
+/* ------------------------------------------------------------
+   DATA PRODUK
+   Nama & deskripsi di bawah ini disesuaikan dengan warna dress
+   pada foto koleksi (sage, krem, dan coklat), tapi bahan, panjang,
+   dan harganya MASIH CONTOH — ganti dengan data produk asli kamu.
+   cat: 'harian' | 'kerja' | 'acara'
+   ------------------------------------------------------------ */
+const PRODUCTS = [
+  {
+    id: 'DM-D01', name: 'Muse Sage A-Line', cat: 'harian', badge: 'Paling dicari',
+    img: 'assets/dress-1.jpeg', price: 229000,
+    desc: 'Dress potongan A-line warna sage yang jatuh longgar di pinggul. Cocok dipakai ke mana saja tanpa perlu banyak mikir.',
+    specs: ['Bahan: katun viscose, ringan dan tidak menerawang', 'Panjang: 108 cm (midi, di bawah lutut)', 'Ada saku di kedua sisi', 'Tersedia beberapa pilihan warna']
+  },
+  {
+    id: 'DM-D02', name: 'Muse Olive Wrap', cat: 'kerja', badge: '',
+    img: 'assets/dress-2.jpeg', price: 249000,
+    desc: 'Warna olive dengan bentuk rapi yang tidak mudah kusut, jadi tetap terlihat profesional dari pagi sampai sore.',
+    specs: ['Bahan: campuran katun dengan tekstur halus', 'Panjang: 112 cm', 'Lengan 3/4, nyaman untuk ruang ber-AC', 'Ada tali ikat di pinggang']
+  },
+  {
+    id: 'DM-D03', name: 'Muse Sage Sundress', cat: 'harian', badge: 'Baru',
+    img: 'assets/dress-3.jpeg', price: 199000,
+    desc: 'Dress sage yang adem untuk cuaca panas. Simpel tapi tetap terlihat manis dipakai harian.',
+    specs: ['Bahan: katun tipis bertekstur', 'Panjang: 92 cm (di atas lutut)', 'Tali bahu bisa disesuaikan', 'Cocok untuk size XS–L']
+  },
+  {
+    id: 'DM-D04', name: 'Muse Taupe Wrap Dress', cat: 'acara', badge: '',
+    img: 'assets/dress-4.jpeg', price: 279000,
+    desc: 'Potongan wrap warna taupe yang menyesuaikan bentuk badan, jadi terasa pas tanpa harus menahan napas.',
+    specs: ['Bahan: viscose dengan jatuh kain lembut', 'Panjang: 118 cm (maxi)', 'Lengan panjang dengan kancing pergelangan', 'Cocok untuk acara semi-formal']
+  },
+  {
+    id: 'DM-D05', name: 'Muse Linen Sage', cat: 'kerja', badge: '',
+    img: 'assets/dress-5.jpeg', price: 259000,
+    desc: 'Tekstur linen warna sage yang terlihat mahal, tapi tetap santai saat dipakai harian.',
+    specs: ['Bahan: linen blend, menyerap keringat', 'Panjang: 105 cm', 'Kerah tegak sederhana', 'Aman disetrika suhu sedang']
+  },
+  {
+    id: 'DM-D06', name: 'Muse Coklat Maxi', cat: 'acara', badge: '',
+    img: 'assets/dress-6.jpeg', price: 269000,
+    desc: 'Dress maxi warna coklat dengan bagian bawah berundak yang terlihat lebih hidup saat dipakai bergerak.',
+    specs: ['Bahan: katun voile berlapis dalaman', 'Panjang: 120 cm (maxi)', 'Lengan balon dengan karet halus', 'Tidak menerawang saat difoto dengan flash']
+  }
+];
+
+/* ------------------------------------------------------------
+   DATA UKURAN (cm) — ukur ulang dari produk yang benar-benar dijual
+   ------------------------------------------------------------ */
+const SIZES = [
+  { size: 'XS', bust: '80–84', waist: '62–66', length: '104', weight: '38–45 kg' },
+  { size: 'S',  bust: '85–89', waist: '67–71', length: '106', weight: '45–53 kg' },
+  { size: 'M',  bust: '90–94', waist: '72–76', length: '108', weight: '53–62 kg' },
+  { size: 'L',  bust: '95–100', waist: '77–82', length: '110', weight: '62–70 kg' },
+  { size: 'XL', bust: '101–106', waist: '83–88', length: '112', weight: '70–78 kg' },
+  { size: 'XXL', bust: '107–113', waist: '89–95', length: '114', weight: '78–88 kg' }
+];
+const SIZE_OPTIONS = SIZES.map(s => s.size);
+
+/* ------------------------------------------------------------
+   ULASAN PELANGGAN
+   ------------------------------------------------------------------
+   PENTING: yang terisi di bawah ini adalah CONTOH TAMPILAN, bukan
+   ulasan pelanggan asli. Semua entri diberi tanda  draft: true
+   sehingga di halaman muncul label "Contoh".
+
+   Cara menggantinya dengan ulasan asli:
+   1. Ganti nama, kota, ukuran, produk, rating, dan isi ulasannya.
+   2. HAPUS bagian  draft: true  pada entri tersebut.
+   3. Kalau sudah ada minimal satu ulasan asli, hapus semua entri contoh.
+   Setelah tidak ada lagi  draft: true, peringatan "Contoh" hilang sendiri.
+
+   Field:
+     name   : nama pelanggan (boleh nama depan atau inisial, sesuai izin)
+     city   : kota
+     size   : ukuran yang dibeli (opsional)
+     item   : nama dress yang dibeli (opsional)
+     rating : 1 sampai 5
+     text   : isi ulasan
+     draft  : true = masih contoh, false/hapus = ulasan asli
+   ------------------------------------------------------------ */
+const REVIEWS = [
+  {
+    name: 'Rina', city: 'Bandung', size: 'M', item: 'Muse Sage A-Line', rating: 5, draft: true,
+    text: 'Bahannya adem dan tidak menerawang. Dipakai kerja dari pagi sampai sore tetap nyaman, ukuran M pas di badan saya (158 cm, 55 kg).'
+  },
+  {
+    name: 'Dwi', city: 'Surabaya', size: 'L', item: 'Muse Olive Wrap', rating: 5, draft: true,
+    text: 'Awalnya ragu belanja online, tapi adminnya sabar membantu memilih ukuran lewat WhatsApp. Hasilnya pas dan jahitannya rapi.'
+  },
+  {
+    name: 'Sari', city: 'Yogyakarta', size: 'S', item: 'Muse Sage Sundress', rating: 4, draft: true,
+    text: 'Warnanya kalem dan gampang dipadukan. Paket sampai dalam dua hari.'
+  },
+  {
+    name: 'Nadia', city: 'Jakarta', size: 'M', item: 'Muse Taupe Wrap Dress', rating: 5, draft: true,
+    text: 'Dipakai ke acara keluarga dan banyak yang bertanya belinya di mana. Kainnya jatuh, tidak terlihat murah.'
+  },
+  {
+    name: 'Lita', city: 'Medan', size: 'XL', item: 'Muse Linen Sage', rating: 4, draft: true,
+    text: 'Untuk ukuran XL cukup lega, tidak kekecilan. Sedikit kusut setelah dicuci, tapi wajar untuk bahan linen.'
+  },
+  {
+    name: 'Ayu', city: 'Semarang', size: 'S', item: 'Muse Coklat Maxi', rating: 5, draft: true,
+    text: 'Panjangnya pas, tidak menyapu lantai. Warna coklatnya hangat dan sesuai foto.'
+  }
+];
+
+/* ============================================================
+   Selanjutnya tidak perlu diubah, kecuali kamu mau menyesuaikan logika.
+   ============================================================ */
+const rupiah = n => 'Rp' + n.toLocaleString('id-ID');
+
+function waLink(message) {
+  return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(message);
+}
+
+function orderMessage(p, size, qty) {
+  return 'Halo ' + STORE_NAME + ', saya mau pesan:\n\n' +
+    'Dress: ' + p.name + ' (' + p.id + ')\n' +
+    'Ukuran: ' + size + '\n' +
+    'Jumlah: ' + qty + ' pcs\n' +
+    'Harga: ' + rupiah(p.price * qty) + '\n\n' +
+    'Mohon dibantu cek stok dan ongkirnya ya. Terima kasih!';
+}
+
+const generalMessage = 'Halo ' + STORE_NAME + ', saya mau tanya-tanya soal koleksi dress-nya. Bisa dibantu?';
+
+/* ---------- Tautan WhatsApp umum ---------- */
+document.querySelectorAll('[data-wa-general]').forEach(el => {
+  el.setAttribute('href', waLink(generalMessage));
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener');
+});
+
+/* ---------- Tautan ajakan kirim ulasan ---------- */
+const reviewInviteMessage = 'Halo ' + STORE_NAME + ', saya sudah menerima dressnya dan mau kirim ulasan.\n\n' +
+  'Nama/Inisial: \nKota: \nDress yang dibeli: \nUkuran: \nNilai (1-5): \nUlasan saya: ';
+document.querySelectorAll('[data-wa-review]').forEach(el => {
+  el.setAttribute('href', waLink(reviewInviteMessage));
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener');
+});
+
+/* ---------- Tabel ukuran ---------- */
+document.getElementById('sizeTable').innerHTML = SIZES.map(r => `
+  <tr class="bg-white/40">
+    <th scope="row" class="px-6 py-4 text-left font-medium">${r.size}</th>
+    <td class="px-6 py-4 text-ink-soft">${r.bust} cm</td>
+    <td class="px-6 py-4 text-ink-soft">${r.waist} cm</td>
+    <td class="px-6 py-4 text-ink-soft">${r.length} cm</td>
+    <td class="px-6 py-4 text-ink-soft">${r.weight}</td>
+  </tr>`).join('');
+
+/* ---------- Kartu produk ---------- */
+const grid = document.getElementById('productGrid');
+const emptyState = document.getElementById('emptyState');
+
+function cardHTML(p, i) {
+  return `
+  <article class="product-card reveal group" data-cat="${p.cat}">
+    <button type="button" data-open="${p.id}" class="block w-full text-left">
+      <div class="relative aspect-[2/5] overflow-hidden rounded-2xl bg-[#CFCEC6]">
+        <div class="ph absolute inset-0 grid place-items-center px-4 text-center">
+          <span class="eyebrow text-[10px] text-rose-dark">${p.img}</span>
+        </div>
+        <img src="${p.img}" alt="Dress ${p.name}" loading="lazy"
+             class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+             onerror="this.style.display='none'" />
+        ${p.badge ? `<span class="absolute left-4 top-4 rounded-full bg-cream/95 px-3.5 py-1.5 text-[10px] uppercase tracking-[0.16em] text-rose-dark">${p.badge}</span>` : ''}
+      </div>
+    </button>
+    <div class="mt-5 flex items-start justify-between gap-4">
+      <div>
+        <h3 class="font-display text-xl leading-snug">${p.name}</h3>
+        <p class="mt-1 text-[12px] text-muted">${p.id} · ${p.specs[1] || ''}</p>
+      </div>
+      <p class="shrink-0 text-[15px] font-medium">${rupiah(p.price)}</p>
+    </div>
+    <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-ink-soft">${p.desc}</p>
+    <button type="button" data-open="${p.id}"
+      class="mt-5 w-full rounded-full border border-ink/15 py-3 text-sm font-medium transition group-hover:border-ink/40 group-hover:bg-white/70">
+      Lihat &amp; Pesan
+    </button>
+  </article>`;
+}
+
+function renderProducts(filter) {
+  const list = !filter || filter === 'semua' ? PRODUCTS : PRODUCTS.filter(p => p.cat === filter);
+  grid.innerHTML = list.map(cardHTML).join('');
+  emptyState.classList.toggle('hidden', list.length > 0);
+  observeReveals(grid);
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.className = 'filter-btn shrink-0 rounded-full border border-ink/15 px-5 py-2.5 text-sm transition hover:border-ink/40';
+    });
+    btn.className = 'filter-btn shrink-0 rounded-full border border-ink/15 bg-ink px-5 py-2.5 text-sm text-cream transition';
+    renderProducts(btn.dataset.filter);
+  });
+});
+
+/* ---------- Lightbox ---------- */
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbPh = document.getElementById('lbPh');
+let active = null;
+let chosenSize = 'M';
+let qty = 1;
+
+function paintLightbox() {
+  if (!active) return;
+  document.getElementById('lbName').textContent = active.name;
+  document.getElementById('lbPrice').textContent = rupiah(active.price);
+  document.getElementById('lbDesc').textContent = active.desc;
+  document.getElementById('lbTotal').textContent = rupiah(active.price * qty);
+  document.getElementById('qty').textContent = qty;
+  document.getElementById('lbSpecs').innerHTML = active.specs.map(s => `<li>· ${s}</li>`).join('');
+  lbPh.querySelector('span').textContent = active.img;
+  document.getElementById('lbSizes').innerHTML = SIZE_OPTIONS.map(s => `
+    <button type="button" data-size="${s}"
+      class="size-btn rounded-full border px-5 py-2.5 text-sm transition ${s === chosenSize ? 'border-ink bg-ink text-cream' : 'border-ink/15 hover:border-ink/40'}">${s}</button>`).join('');
+  document.getElementById('lbOrder').onclick = () => {
+    window.open(waLink(orderMessage(active, chosenSize, qty)), '_blank', 'noopener');
+  };
+  document.querySelectorAll('.size-btn').forEach(b => {
+    b.addEventListener('click', () => { chosenSize = b.dataset.size; paintLightbox(); });
+  });
+}
+
+function openLightbox(id) {
+  active = PRODUCTS.find(p => p.id === id);
+  if (!active) return;
+  chosenSize = 'M';
+  qty = 1;
+  lbImg.style.display = '';
+  lbImg.setAttribute('src', active.img);
+  lbImg.setAttribute('alt', 'Dress ' + active.name);
+  paintLightbox();
+  lb.classList.remove('hidden');
+  lb.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lbClose').focus();
+}
+
+function closeLightbox() {
+  lb.classList.add('hidden');
+  lb.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', e => {
+  const opener = e.target.closest('[data-open]');
+  if (opener) { openLightbox(opener.dataset.open); return; }
+  if (e.target === lb || e.target.id === 'lbClose' || e.target.closest('#lbClose')) closeLightbox();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+document.getElementById('qtyMinus').addEventListener('click', () => { qty = Math.max(1, qty - 1); paintLightbox(); });
+document.getElementById('qtyPlus').addEventListener('click', () => { qty = Math.min(10, qty + 1); paintLightbox(); });
+
+/* ---------- Ulasan ---------- */
+const STAR_FULL = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.45 6.19 20.5l1.11-6.47L2.6 9.45l6.5-.95L12 2.6z"/></svg>';
+const STAR_EMPTY = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3.6l2.7 5.5 6 .88-4.35 4.24 1.03 5.98L12 17.36 6.62 20.2l1.03-5.98L3.3 9.98l6-.88L12 3.6z"/></svg>';
+
+function stars(rating) {
+  let out = '';
+  for (let i = 1; i <= 5; i++) out += i <= rating ? STAR_FULL : STAR_EMPTY;
+  return out;
+}
+
+const reviewCount = REVIEWS.length;
+const reviewAvg = reviewCount ? REVIEWS.reduce((a, r) => a + r.rating, 0) / reviewCount : 0;
+const reviewDrafts = REVIEWS.filter(r => r.draft).length;
+
+function renderReviews() {
+  const grid = document.getElementById('reviewGrid');
+  const empty = document.getElementById('reviewEmpty');
+  const summary = document.getElementById('reviewSummary');
+  const notice = document.getElementById('reviewNotice');
+
+  if (!reviewCount) {
+    grid.innerHTML = '';
+    empty.classList.remove('hidden');
+    summary.classList.add('hidden');
+    notice.classList.add('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+
+  summary.innerHTML = `
+    <div class="flex items-center gap-5">
+      <p class="font-display text-5xl leading-none">${reviewAvg.toFixed(1).replace('.', ',')}</p>
+      <div>
+        <div class="flex gap-0.5 text-rose-dark">${stars(Math.round(reviewAvg))}</div>
+        <p class="mt-1.5 text-[12px] text-muted">dari ${reviewCount} ulasan ${reviewDrafts ? '(masih contoh)' : 'yang ditampilkan'}</p>
+      </div>
+    </div>`;
+  summary.classList.remove('hidden');
+
+  if (reviewDrafts) {
+    notice.innerHTML = '<strong class="font-medium text-ink">' + reviewDrafts + ' dari ' + reviewCount +
+      ' ulasan di bawah masih CONTOH</strong> dan bukan ulasan pelanggan asli. Buka file ini, cari <code class="rounded bg-white/70 px-1.5 py-0.5">REVIEWS</code>, ganti isinya dengan ulasan asli, lalu hapus bagian <code class="rounded bg-white/70 px-1.5 py-0.5">draft: true</code>. Label "Contoh" akan hilang sendiri.';
+    notice.classList.remove('hidden');
+  } else {
+    notice.classList.add('hidden');
+  }
+
+  grid.innerHTML = REVIEWS.map(r => `
+    <figure class="reveal flex flex-col rounded-3xl border border-line bg-white/60 p-7">
+      <div class="flex items-center justify-between gap-4">
+        <div class="flex gap-0.5 text-rose-dark" role="img" aria-label="Nilai ${r.rating} dari 5">${stars(r.rating)}</div>
+        ${r.draft ? '<span class="shrink-0 rounded-full bg-rose-light/60 px-2.5 py-1 text-[10px] uppercase tracking-[0.14em] text-rose-dark">Contoh</span>' : ''}
+      </div>
+      <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-ink-soft">&ldquo;${r.text}&rdquo;</blockquote>
+      <figcaption class="mt-5 border-t border-line pt-4 text-[12px] leading-relaxed text-muted">
+        <span class="font-medium text-ink">${r.name}</span> &middot; ${r.city}
+        ${r.size || r.item ? '<br />' + [r.size ? 'ukuran ' + r.size : '', r.item || ''].filter(Boolean).join(' &middot; ') : ''}
+      </figcaption>
+    </figure>`).join('');
+
+  observeReveals(grid);
+}
+
+/* ---------- FAQ ---------- */
+document.querySelectorAll('.faq-trigger').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.acc-panel.open').forEach(p => {
+      p.classList.remove('open');
+      p.previousElementSibling.setAttribute('aria-expanded', 'false');
+      p.previousElementSibling.querySelector('.faq-icon').textContent = '+';
+    });
+    if (!isOpen) {
+      panel.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      icon.textContent = '−';
+    }
+  });
+});
+
+/* ---------- Menu mobile ---------- */
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+  const open = !mobileMenu.classList.toggle('hidden');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+/* ---------- Animasi muncul ---------- */
+let observer;
+function observeReveals(scope) {
+  if (!observer) {
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); observer.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px' });
+  }
+  (scope || document).querySelectorAll('.reveal:not(.in)').forEach(el => observer.observe(el));
+}
+
+/* ---------- Inisialisasi ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+renderProducts('semua');
+renderReviews();
+observeReveals(document);
+</script>
+</body>
+</html>
